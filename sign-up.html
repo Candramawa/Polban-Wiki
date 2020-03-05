@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>wikiPolban</title>
+  <title>wikiPolban | Sign Up</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -73,11 +73,11 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="active">
-                    <a class="page-scroll" href="#home">Home</a>
+                  <li>
+                    <a class="page-scroll" href="index.html#home">Home</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#about">Tentang Polban</a>
+                    <a class="page-scroll" href="index.html#about">Tentang Polban</a>
                   </li>
                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Rekayasa<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -98,19 +98,19 @@
                     </ul> 
                   </li>
                   <li>
-                    <a class="page-scroll" href="#team">Peminat</a>
+                    <a class="page-scroll" href="index.html#peminatan">Peminat</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#portfolio">FAQ</a>
+                    <a class="page-scroll" href="index.html#faq">FAQ</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#portfolio">About Us</a>
+                    <a class="page-scroll" href="index.html#contact">About Us</a>
                   </li>
                   <li>
-                    <a class="page-scroll" data-toggle="modal" data-target="#login">Sign-in</a>
+                    <a class="page-scroll" data-toggle="modal" data-target="index.html#login">Sign-in</a>
                   </li>
-                  <li>
-                    <a class="page-scroll" href="#portfolio">Sign-up</a>
+                  <li class="active">
+                    <a class="page-scroll" href="sign-up.html">Sign-up</a>
                   </li>
 
                 </ul>
@@ -127,6 +127,66 @@
   <!-- header end -->
 
   <!-- CONTENT PLACED HERE - BIMA !!! -->
+
+  <!-- Start contact Area -->
+  <div id="contact" class="contact-area" style="padding-top: 3%;">
+    <div class="contact-inner area-padding">
+      <div class="contact-overly"></div>
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2>Sign-Up</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Start  contact -->
+          <div class="col-md-6 col-md-offset-3">
+            <div class="form contact-form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <label for="username">Username : </label>
+                  <input type="text" name="username" class="form-control" id="name" placeholder="Username" data-rule="minlen:8" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <label for="username">E-Mail : </label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="example@domain.com" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <label for="username">Password : </label>
+                  <input type="password" class="form-control" name="Password" id="Password" placeholder="Password" data-rule="minlen:8" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <label for="username">Ulangi Password : </label>
+                  <input type="password" class="form-control" name="Password" id="Password" placeholder="Password" data-rule="minlen:8" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <label for="username">Roled as : </label>
+                  <select class="form-control" id="sel1" required>
+                    <option>---Role---</option>
+                    <option value="1">Student</option>
+                    <option value="1">Lecturer</option>
+                    <option value="1">Editor</option>
+                  </select>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button class="btn btn-primary" type="submit">Sign-Up</button></div>
+              </form>
+            </div>
+          </div>
+          <!-- End Left contact -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Contact Area -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
@@ -148,38 +208,5 @@
 
   <script src="js/main.js"></script>
 </body>
-
-<!-- Modal -->
-<div class="modal fade" id="login" tabindex="-1" role="dialog">
-  <div class="modal-dialog" style="padding-top: 10%;" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h5 class="modal-title" id="exampleModalLabel">Login as User</h5>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="text" placeholder="Exp : Username1" required>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password" required>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label" for="exampleCheck1">Jika anda belum mendaftar silahkan Sign-Up terlebih dahulu</label>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Sign-Up</button>
-        <button type="button" class="btn btn-primary">Log-In</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 </html>
