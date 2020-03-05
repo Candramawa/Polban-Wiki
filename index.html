@@ -98,23 +98,26 @@
                     </ul> 
                   </li>
                   <li>
-<<<<<<< Updated upstream
+
                     <a class="page-scroll" href="#team">Peminat</a>
                   </li>
                   <li>
                     <a class="page-scroll" href="#portfolio">FAQ</a>
-=======
+
+                    <a class="page-scroll" href="#peminatan">Peminat</a>
+                  </li>
+                  <li>
                     <a class="page-scroll" href="#faq">FAQ</a>
->>>>>>> Stashed changes
+
                   </li>
                   <li>
-                    <a class="page-scroll" href="#portfolio">About Us</a>
+                    <a class="page-scroll" href="#contact">About Us</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#portfolio">Sign-in</a>
+                    <a class="page-scroll" data-toggle="modal" data-target="#login">Sign-in</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#portfolio">Sign-up</a>
+                    <a class="page-scroll" href="sign-up.html">Sign-up</a>
                   </li>
 
                 </ul>
@@ -246,8 +249,7 @@
                 <h4 class="sec-head">Visi</h4>
               </a>
               <p>
-                Menjadi institusi yang unggul dan terdepan dalam pendid ikan vokasi yang inovatif dan adaptif terhadap perkembangan ilmu
-pengetahuan dan teknologi terapan
+                Menjadi institusi yang unggul dan terdepan dalam pendid ikan vokasi yang inovatif dan adaptif terhadap perkembangan ilmu pengetahuan dan teknologi terapan
               </p>
               
             </div>
@@ -493,66 +495,9 @@ pengetahuan dan teknologi terapan
   </div>
   <!-- End Service area -->
 
-<<<<<<< Updated upstream
-  <!-- our-skill-area start -->
-  <div class="our-skill-area fix hidden-sm">
-    <div class="test-overly"></div>
-    <div class="skill-bg area-padding-2">
-      <div class="container">
-        <!-- section-heading end -->
-        <div class="row">
-          <div class="skill-text">
-            <!-- single-skill start -->
-            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-              <div class="single-skill">
-                <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="95" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                  <h3 class="progress-h4">Web Design</h3>
-                </div>
-              </div>
-            </div>
-            <!-- single-skill end -->
-            <!-- single-skill start -->
-            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-              <div class="single-skill">
-                <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="85" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                  <h3 class="progress-h4">Graphics Design</h3>
-                </div>
-              </div>
-            </div>
-            <!-- single-skill end -->
-            <!-- single-skill start -->
-            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-              <div class="single-skill">
-                <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                  <h3 class="progress-h4">Php Developer</h3>
-                </div>
-              </div>
-            </div>
-            <!-- single-skill end -->
-            <!-- single-skill start -->
-            <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-              <div class="single-skill">
-                <div class="progress-circular">
-                  <input type="text" class="knob" value="0" data-rel="65" data-linecap="round" data-width="175" data-bgcolor="#fff" data-fgcolor="#3EC1D5" data-thickness=".20" data-readonly="true" disabled>
-                  <h3 class="progress-h4">Java Script</h3>
-                </div>
-              </div>
-            </div>
-            <!-- single-skill end -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- our-skill-area end -->
 
-=======
->>>>>>> Stashed changes
   <!-- Faq area start -->
-  <div class="faq-area area-padding">
+  <div id="faq" class="faq-area area-padding">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -812,5 +757,38 @@ pengetahuan dan teknologi terapan
 
   <script src="js/main.js"></script>
 </body>
+
+<!-- Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog">
+  <div class="modal-dialog" style="padding-top: 10%;" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-title" id="exampleModalLabel">Login as User</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="text" placeholder="Exp : Username1" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="exampleCheck1">Jika anda belum mendaftar silahkan Sign-Up terlebih dahulu</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Sign-Up</button>
+        <button type="button" class="btn btn-primary">Log-In</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </html>
