@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Akuntansi - wikiPolban</title>
+  <title>Web Scrapping - wikiPolban</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -24,7 +24,7 @@
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
-
+  <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
   <!-- Nivo Slider Theme -->
   <link href="css/nivo-slider-theme.css" rel="stylesheet">
 
@@ -40,24 +40,6 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
-  <!-- Script Javascript Ngambil data JSON-->
-  <script>
-    $(document).ready(function(){
-       $.getJSON('scraping.json',function(data){
-           var headline_data = '';
-           
-           $.each(data, function(key, value) {
-               headline_data += "<table border='1'><tr><td><img src='"+value.gambar"'></td></tr>"
-               headline_data += '<tr>';
-               headline_data += '<td>'+value.nama+'</td>'
-               headline_data += '<td>'+value.harga+'</td>'
-               headline_data += '<td>'+value.warna+'</td>'
-               headline_data += '</tr></table>'; 
-           });
-           $('#scraping').append(headline_data);
-       });
-   });
-</script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -154,6 +136,26 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="section-headline text-center">
                 <h2>Web Scrapping</h2>
+
+                <div class="row">
+                  <div class="col-md-12">
+                      <table id="bimz" class="table table-striped table-bordered">
+                          <thead>
+                              <tr>
+                                <th>No</th>
+                                <th>Nama Produk</th>
+                                <th>Gambar</th>
+                                <th>Diskon</th>
+                                <th>Harga</th>
+                                <th>Ukuran</th>
+                                <th>Warna</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
               </div>
             </div>
 
@@ -274,6 +276,8 @@
   <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
   <script src="lib/appear/jquery.appear.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
@@ -282,3 +286,34 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#bimz').DataTable({
+            "lengthChange": false,
+            processing: true,
+            "ajax": {
+                "url": "headline.json",
+                dataSrc:""
+            },
+            "columnDefs": [
+              { "orderable": false, "targets": 0 }
+            ],
+            "fnRowCallback": function(nRow,aData,iDisplayIndex,iDisplayIndexFull) {
+              var index = iDisplayIndex + 1;
+              $('td:eq(0)',nRow).html(index);
+        return nRow;
+      },
+            "columns": [
+                { "data": "waktu" },
+                { "data": "judul" },
+                { "data": "judul" },
+                { "data": "judul" },
+                { "data": "kateg" },
+                { "data": "waktu" },
+                { "data": "ambil" }
+            ]
+        }
+      );
+    });
+</script>
